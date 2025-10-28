@@ -1,8 +1,8 @@
 .invoice-form-container {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  /* use column flex so the form body can scroll independently when it grows */
+  /* Remove box styling so it blends with the main page background */
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   max-height: 80vh;
@@ -39,7 +39,6 @@
 
 .invoice-form {
   padding: 20px;
-  /* allow the form content to scroll when it's taller than the container */
   overflow: auto;
   flex: 1 1 auto;
 }
