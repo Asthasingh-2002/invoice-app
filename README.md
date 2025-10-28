@@ -1,18 +1,55 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Invoice App
 
-Currently, two official plugins are available:
+>This is a React + Vite based invoice management app. You can upload invoice PDFs, auto-populate fields, and manage invoice details.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup Instructions
 
-## React Compiler
+### Prerequisites
+- Node.js (v18 or newer recommended)
+- npm (comes with Node.js)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### 1. Clone the repository
+```powershell
+git clone https://github.com/Asthasingh-2002/invoice-app.git
+cd invoice-app
+```
 
-Note: This will impact Vite dev & build performances.
+### 2. Install dependencies
+```powershell
+npm install
+```
 
-## Expanding the ESLint configuration
+### 3. Start the development server
+```powershell
+npm run dev
+```
+This will start the app at [http://localhost:5173](http://localhost:5173) (default Vite port).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 4. Open the app
+Visit [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Features
+- Upload invoice PDFs and preview them
+- Auto-populate invoice fields from PDF (if implemented)
+- Fill and save invoice details
+- Responsive design
+
+## Project Structure
+- `src/components/` — React components (InvoiceForm, PDFUploadArea, Header)
+- `src/pages/` — Page components (InvoicePage, LoginPage)
+- `src/styles/` — CSS files for styling
+- `public/` — Static assets
+
+## Troubleshooting
+- If you see errors about missing dependencies, run `npm install` again.
+- For port conflicts, change the port in `vite.config.js` or stop other apps using port 5173.
+
+## Build for Production
+```powershell
+npm run build
+```
+Output will be in the `dist/` folder.
+
+## License
+MIT
