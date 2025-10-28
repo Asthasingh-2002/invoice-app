@@ -1,9 +1,11 @@
 .pdf-upload-area {
   background: white;
   border-radius: 8px;
-  overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  overflow: hidden;
 }
 
 .upload-box {
@@ -15,6 +17,7 @@
   transition: all 0.3s;
   cursor: pointer;
   margin: 20px;
+  overflow: auto;
 }
 
 .upload-box.drag-active {
@@ -61,6 +64,10 @@
 
 .pdf-viewer {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  overflow: hidden;
 }
 
 .pdf-header {
@@ -91,8 +98,10 @@
   padding: 10px;
   display: flex;
   justify-content: center;
-  max-height: 600px;
+  /* let the PDF canvas area scroll inside this container; don't use fixed px height
+     so it adapts to the panel max-height above */
   overflow-y: auto;
+  flex: 1 1 auto;
 }
 
 .pdf-container canvas {

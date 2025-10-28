@@ -17,6 +17,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  /* Prevent grid items from stretching to match each other's height */
+  align-items: start;
 }
 
 @media (max-width: 1024px) {
