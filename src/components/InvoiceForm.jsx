@@ -50,7 +50,6 @@ const DUMMY_DATA = {
 
 function InvoiceForm({ onSubmit, initialData }) {
   const [activeTab, setActiveTab] = useState("vendor");
-  const [totalExpense, setTotalExpense] = useState(0);
   const [comments, setComments] = useState([]);
   const [currentComment, setCurrentComment] = useState("");
 
